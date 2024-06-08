@@ -12,7 +12,12 @@ Stworzono scenariusze:
 
 
  Uruchamianie:
-   W celu uruchomienia testów uruchom terminal i zainstaluj Selenium:
-   pip install selenium
+   Otwórz projekt na swoim lokalnym środkowisku przy pomocy terminala (np. w PyCharm):
+   git clone https://github.com/jagodawojtyczka-web/projektsellenium.git
    
-Zainstaluj również WebDriver 
+   Poprzez terminal zainstaluj Selenium:
+   pip install selenium
+
+   Następnie zainstaluje WebDriver - wersja Webdrivera zależna jest od używanego oprogramowania.
+   
+
