@@ -14,7 +14,6 @@ def popup1_deny(element_class):
     waiting_time = WebDriverWait(driver, timeout)
     return waiting_time.until(found, timeout_message)
 
-
 driver = webdriver.Chrome()
 driver.maximize_window()
 time.sleep(1)
@@ -36,16 +35,27 @@ except TimeoutException:
     print('Nie znaleziono')
     skip
 
-popup1_deny = driver.find_element(By.CLASS_NAME, '_24EHh')
-popup1_deny.click()
+popup_deny = driver.find_element(By.CLASS_NAME, '_24EHh')
+popup_deny.click()
 time.sleep(1)
 print("Wyłączono pop up z powiadomieniami")
 
-search_box = driver.find_element(By.XPATH, '//*[@id="search-words"]')
-search_box.send_keys("lampka nocna")
-search_box.send_keys(keys.RETURN)
-time.sleep(1)
-print("Test zakończony. Wyszukano produkt")
+help_button = driver.find_element(By.CSS_SELECTOR, 'body > div.footer-wrap > div.help-center-y2023 > div > section.section-left > div.f-link-box.f-link-left > ul > li:nth-child(1) > a')
+help_button.click()
+time.sleep(3)
+print("Włączono stronę pomocy")
+
+helpcategory_button = driver.find_element(By.XPATH, '//*[@id="root"]/div/div/div[3]/div/div/div[1]/div[2]/div[2]/div/div[2]/div[2]/div[1]/i')
+helpcategory_button.click()
+
+helparticle_button = driver.find_element(By.XPATH, '//*[@id="root"]/div/div/div[3]/div/div/div[1]/div[2]/div[2]/div/div[2]/div[2]/div[2]/div[1]')
+helparticle_button.click()
+time.sleep(2)
+print("Wybrano artykuł")
+
+opinion_button = driver.find_element(By.XPATH, '//*[@id="c_l6ktyxu8-content"]/div[3]/button[1]/span')
+opinion_button.click()
+print("Wysłano opinie na temat artykułu")
+print("Zakończono testy")
 
 driver.quit()
-
