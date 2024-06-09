@@ -9,6 +9,7 @@ Stworzono scenariusze:
 3. Dodawanie produktu do koszyka - python file: dodanieproduktudokoszyka.py
 4. Przeglądanie kategorii - python file: przeglądaniekategorii.py
 5. Wysłanie ankiety satysfkacji - python file: ankietasatysfakcji.py
+6. Uruchomienie artykułu pomocowego - python file: artykułypomocowe.py
 
 
  Uruchamianie:
