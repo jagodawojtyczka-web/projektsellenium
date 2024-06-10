@@ -1,5 +1,6 @@
 from unittest import skip
 from selenium import webdriver
+from selenium.webdriver import Keys
 from selenium.webdriver.common import keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -45,7 +46,7 @@ print("Wyłączono pop up z powiadomieniami")
 
 search_box = driver.find_element(By.XPATH, '//*[@id="search-words"]')
 search_box.send_keys("lampka nocna")
-search_box.send_keys(keys.RETURN)
+search_box.send_keys(Keys.RETURN)
 time.sleep(1)
 print("Test zakończony. Wyszukano produkt")
 
