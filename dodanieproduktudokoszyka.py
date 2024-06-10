@@ -28,6 +28,7 @@ button1_accept.click()
 time.sleep(1)
 print("Zaakceptowano cookies")
 
+#instrukcja try...except dodana ze względu na pop up, który pokazuje się tymczasowo na stronie
 try:
     deny_button = popup1_deny('pop-close-btn')
     deny_button.click()
@@ -43,7 +44,7 @@ print("Wyłączono pop up z powiadomieniami")
 
 search_box = driver.find_element(By.XPATH, '//*[@id="search-words"]')
 search_box.send_keys('okulary')
-search_box.send_keys(Keys.ENTER)
+search_box.send_keys(Keys.RETURN)
 time.sleep(1)
 
 add_to_cart_button1 = driver.find_element(By.CSS_SELECTOR, "#card-list > div:nth-child(1) > div > div > a > div.multi--image--2bIiWPB.multi--imagesGallery--3xCP4Ci.cards--image--1nakz5t > div.multi--shopCart--darm7xs.multi--shopLtr--1kiOXiJ.multi--shopCartImage--2DX88PV")

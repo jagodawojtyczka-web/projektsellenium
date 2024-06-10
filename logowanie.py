@@ -26,6 +26,7 @@ button1_accept.click()
 time.sleep(1)
 print("Zaakceptowano cookies")
 
+#instrukcja try...except dodana ze względu na pop up, który pokazuje się tymczasowo na stronie
 try:
     deny_button = popup1_deny('pop-close-btn')
     deny_button.click()
@@ -64,7 +65,7 @@ except:
     insert_password = driver.find_element(By.XPATH, '//*[@id="batman-dialog-wrap"]/div/div/div[2]/div[2]/div/span/span[1]/input')
 insert_password.clear()
 insert_password.send_keys("Testy.python3!")
-insert_password.send_keys(Keys.ENTER)
+insert_password.send_keys(Keys.RETURN)
 print("Testy zakończone")
 
 driver.quit()

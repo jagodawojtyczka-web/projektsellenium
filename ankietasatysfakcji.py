@@ -62,6 +62,7 @@ next2_button.click()
 time.sleep(1)
 print("Odpowiedziano na drugie pytanie")
 
+#instrukcja try...except dodana ze względu na pop up, który pokazuje się tymczasowo na stronie
 try:
     question3_box = driver.find_element(By.ID, '663330668')
 except:

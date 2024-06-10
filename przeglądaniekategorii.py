@@ -26,6 +26,7 @@ button1_accept.click()
 time.sleep(1)
 print("Zaakceptowano cookies")
 
+#instrukcja try...except dodana ze względu na pop up, który pokazuje się tymczasowo na stronie
 try:
     deny_button = popup1_deny('pop-close-btn')
     deny_button.click()
